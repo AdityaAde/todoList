@@ -15,7 +15,7 @@ class App extends Component {
     const context = this;
     this.setState({ isLoading: true }, () =>
       axios
-        .get("https://peaceful-anchorage-52860.herokuapp.com/")
+        .get("https://todolistapi-adit.herokuapp.com/todos")
         .then((res) => context.setState({ todos: res.data, isLoading: false })
         )
     )
@@ -34,7 +34,7 @@ class App extends Component {
   //add todo
   AddTodo = kegiatan => {
     axios
-    .post("https://peaceful-anchorage-52860.herokuapp.com/", {
+    .post("https://todolistapi-adit.herokuapp.com/todos", {
       kegiatan,
       status: false
     })
